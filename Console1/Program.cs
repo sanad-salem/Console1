@@ -14,6 +14,8 @@ namespace Console1
 
         static void Main(string[] args)
         {
+            char c = 'S';
+            WriteLine($"Size of character is : {sizeof(char)} bytes");
             int x = 20;
             DoSomething(ref x);
             WriteLine($"Now, value of x : {x}");
@@ -22,6 +24,13 @@ namespace Console1
 
             WriteLine($"String is \"{firstString()}\"");
 
+
+            // verbatim strings
+            string file = @"C:\users\sanad\myfile.txt";
+            string article = @"In the name of Allah, the most merciful, the most gracious
+                first, greeting to all my muslim colleagues, and thanks for attending this 
+                gathering.";
+            WriteLine($"article is: {article}");
         }
 
         public static void DoSomething(ref int x)
